@@ -1,0 +1,22 @@
+{
+  "name": "michael-kallgren-assessment-node",
+  "version": "1.0.0",
+  "description": "A sample webpage for Lowes recreated from a given wireframe model",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Michael K Kallgren",
+  "license": "ISC"
+}

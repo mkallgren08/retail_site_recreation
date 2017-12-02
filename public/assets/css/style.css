@@ -1,0 +1,218 @@
+/* body, html{
+    width: 99.5%;
+} */
+
+li {
+    font-size: 14px;
+}
+
+p, li {
+    color: #333333;
+    font-family: Helvetica;
+}
+
+#addToCart{
+    background-color: #338700;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+}
+
+.addToCartText{
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#bodyWrapper{
+    margin: 0% 5%;
+}
+
+.hero{
+    margin: 0px 10px;
+}
+
+#heroInfoWrapper{
+    width: 75%;
+}
+
+#heroInnerWrapper{
+    padding: 20px;
+    position: relative;
+}
+
+.heroName{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.heroPrice{
+    margin-bottom: 0px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#heroNameAndList{
+    max-width: 68%;
+    margin: 0px 20px;
+}
+
+#heroPriceAndAddToCart{
+    height: 100%;
+    vertical-align: top;
+    width: 20%;
+    position: absolute;
+    right: 20px;
+}
+
+#heroThbWrapper{
+    line-height: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+#heroWrapper{
+    margin-top: 20px;
+    /* margin-left: 10px;
+    margin-right: 10px; */
+    margin-bottom: 25px;
+}
+
+#heroWrapper, .prodInnerWrapper, .productLink {
+    border: 2px solid lightgrey;
+}
+
+
+.inline{
+    display: inline-block;
+}
+
+
+.prodPrice{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* creates ellipsis using the -webkit functionality */
+
+.productName{
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 3.2em;
+    margin: 0px;
+    margin-top: 20px;
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/* Pure CSS solution for browsers not compatibile with webkit*/
+/* http://hackingui.com/front-end/a-pure-css-solution-for-multiline-text-truncation/ */
+
+.productWrapper{
+    width: 25%;
+}
+
+.prodInnerWrapper{
+    margin: 0px 10px 20px 10px;
+    padding: 20px;
+}
+
+.productLink{
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px #cccccc solid;
+    border-left: 1px #cccccc solid;
+    height: 44px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.prodPrice{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.prodViewMore{
+    color: #0471AF;
+    font-size: 14px;
+    margin-top: 13px;
+    margin-bottom: 13px;
+}
+
+.thbnailDiv{
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 1080px){
+    #heroNameAndList{
+        max-width: 72%;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    #heroThbWrapper{
+        width: 100%;
+    }
+
+    #heroInfoWrapper{
+        width: 100%;
+    }
+
+    .productWrapper{
+        width: 33%;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    .heroName{
+        width:100%;
+    }
+
+    #heroPriceAndAddToCart{
+        position: static;
+    }
+
+    #heroPriceAndAddToCart.inline, 
+    #heroNameAndList.inline{
+        display: block;
+    }
+
+    #heroInfoWrapper, #heroPriceAndAddToCart, 
+    #heroNameAndList{
+        width: 100%;
+    }
+
+    .productWrapper{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .heroName{
+        width:100%;
+    }
+
+    #heroPriceAndAddToCart{
+        position: static;
+    }
+
+    #heroPriceAndAddToCart.inline, 
+    #heroNameAndList.inline{
+        display: block;
+    }
+
+    #heroInfoWrapper, #heroPriceAndAddToCart, 
+    #heroNameAndList{
+        width: 100%;
+    }
+
+    .productWrapper{
+        width: 100%;
+    }
+};
