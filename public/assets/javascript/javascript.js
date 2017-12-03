@@ -23,7 +23,7 @@ $(document).ready(function () {
 
 });
 
-applyClick = () => {
+function applyClick(){
   $("#addToCart").on("click", function () {
     console.log("click heard! Value is " +
       $(this).attr('value'));
@@ -35,7 +35,7 @@ applyClick = () => {
 
 // })
 
-renderProducts = (products) => {
+function renderProducts(products){
 
   for (let i = 0; i < products.length; i++) {
     let price = products[i].pricing.price.retail
@@ -81,7 +81,7 @@ renderProducts = (products) => {
   }
 }
 
-renderHero = (products, x) => {
+function renderHero (products, x){
   $(".hero").empty();
 
   console.log("products: " + products);
