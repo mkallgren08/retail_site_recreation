@@ -172,3 +172,6 @@ function renderHero(products, x) {
 }
 
 console.log("Hello World!")
+
+
+

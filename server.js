@@ -48,6 +48,7 @@ app.get("/", function (req, res) {
 
 // //Route to load the product list
 app.get("/catalogList", function (req, res) {
+    console.log(productList)
     res.send(productList)
 
 
