@@ -7,6 +7,7 @@ const logger = require("morgan")
 const express = require("express");
 var path = require("path");
 var request = require('request');
+var productList = require("./data/product-list.js")
 
 // Initialize Express
 const app = express();
@@ -30,6 +31,8 @@ app.listen(port, function () {
     console.log('App listening on port ' + port)
 });
 
+//console.log(productList)
+
 
 
 // ====================================
@@ -45,10 +48,18 @@ app.get("/", function (req, res) {
 
 // //Route to load the product list
 app.get("/catalogList", function (req, res) {
-    request.get({ url: catalogListURL}, function(error, response, body) { 
-        if (!error && response.statusCode == 200) { 
-            // console.log("Body:" +  body);
-            res.send(body);
-           } 
-       }); 
+    res.send(productList)
+
+
+    // request.get({ url: catalogListURL}, function(error, response, body) { 
+    //     if (!error && response.statusCode == 200) { 
+    //         // console.log("Body:" +  body);
+    //         res.send(body);
+    //        } 
+    //    }); 
 });
+
+
+// =====================================================
+// FUNCTIONS
+// =====================================================

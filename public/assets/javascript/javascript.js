@@ -3,7 +3,9 @@ let productlist = ""
 $(document).ready(function () {
   console.log("ready!");
   $.get("/catalogList", function (req, res) {
-    let catalog = JSON.parse(req);
+    let catalog = req;
+    //console.log(catalog);
+
     productlist = catalog.productList
     console.log(productlist);
     renderProducts(productlist);
@@ -19,11 +21,8 @@ $(document).ready(function () {
   });
 });
 
-$(document).ready(function () {
 
-});
-
-function applyClick(){
+function applyClick() {
   $("#addToCart").on("click", function () {
     console.log("click heard! Value is " +
       $(this).attr('value'));
@@ -35,7 +34,7 @@ function applyClick(){
 
 // })
 
-function renderProducts(products){
+function renderProducts(products) {
 
   for (let i = 0; i < products.length; i++) {
     let price = products[i].pricing.price.retail
@@ -81,7 +80,7 @@ function renderProducts(products){
   }
 }
 
-function renderHero (products, x){
+function renderHero(products, x) {
   $(".hero").empty();
 
   console.log("products: " + products);
