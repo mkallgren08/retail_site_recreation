@@ -1,20 +1,20 @@
 let productlist = ""
 
 $(document).ready(function () {
-  console.log("ready!");
+  //console.log("ready!");
   $.get("/catalogList", function (req, res) {
     let catalog = req;
     //console.log(catalog);
 
     productlist = catalog.productList
-    console.log(productlist);
+    //console.log(productlist);
     renderProducts(productlist);
     renderHero(productlist, 0);
-    console.log("productlist: " + productlist);
+    //console.log("productlist: " + productlist);
     applyClick();
 
     $(".thbnailDiv").mouseenter(function () {
-      console.log("Value: " + $(this).attr('value'));
+      //console.log("Value: " + $(this).attr('value'));
       renderHero(productlist, $(this).attr('value'));
       applyClick();
     })
@@ -24,8 +24,8 @@ $(document).ready(function () {
 
 function applyClick() {
   $("#addToCart").on("click", function () {
-    console.log("click heard! Value is " +
-      $(this).attr('value'));
+    //console.log("click heard! Value is " +
+      //$(this).attr('value'));
     alert("This costs $" + $(this).attr('value'));
   });
 }
@@ -83,8 +83,8 @@ function renderProducts(products) {
 function renderHero(products, x) {
   $(".hero").empty();
 
-  console.log("products: " + products);
-  console.log("Hero variable: " + x);
+  //console.log("products: " + products);
+  //console.log("Hero variable: " + x);
   let price = products[x].pricing.price.retail
 
   // generate a new div to go into the hero wrapper
@@ -171,7 +171,8 @@ function renderHero(products, x) {
   $(".hero").append(heroWrapper);
 }
 
-console.log("Hello World!")
+
+//console.log("Hello World!")
 
 
 
